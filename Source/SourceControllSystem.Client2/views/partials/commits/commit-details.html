@@ -1,0 +1,13 @@
+﻿<div class="container">
+    <h1 class="text-center">{{vm.commit.ProjectName}}</h1>
+    <div class="col-md-6 text-center">
+        Created on: <b>{{vm.commit.CreatedOn  | beautifulDate}}</b>
+    </div>
+    <div class="col-md-6 text-center">
+        By: <b>{{vm.commit.UserName}}</b>
+    </div>
+    <h2 class="col-md-12 text-center">
+        Source code:
+    </h2>
+    <div class="col-md-12">{{vm.commit.SourceCode}}</div>
+</div>

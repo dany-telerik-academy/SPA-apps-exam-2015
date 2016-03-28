@@ -1,0 +1,77 @@
+﻿<div class="container">
+    <h2 class="text-center">
+        Projects
+        <a href="#/projects/create" ng-show="vm.identity.isAuthenticated()" class="btn btn-sm btn-primary pull-right">Create</a>
+    </h2>
+    <div>Notice: press filter</div>
+    <div ng-show="vm.identity.isAuthenticated()" class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <input type="text" ng-model="vm.request.Filter" class="form-control" id="name" placeholder="Name">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-primary" ng-click="vm.filterProjects()">Filter</button>
+        </div>
+        <div class="col-md-2 text-center">
+            <label for="pageSize">Items per page</label>
+        </div>
+        <div class="col-md-1">
+            <input id="pageSize" type="number" ng-model="vm.request.PageSize" class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <div class="col-md-3">
+                <button class="btn btn-primary" ng-click="vm.prevPage()">&lt;&lt;</button>
+            </div>
+            <div class="col-md-6">
+                <input type="number" ng-model="vm.request.Page" class="form-control"/>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary" ng-click="vm.nextPage()">&gt;&gt;</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <div class="text-center">
+                    <label for="sort" class="control-label">Order</label>
+                </div>
+                <div>
+                    <select class="form-control" required="required" ng-init="vm.request.OrderType='asc'" ng-model="vm.request.OrderType" id="sort">
+                        <option value="asc">Ascending</option>
+                        <option value="desc">Descending</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="form-group">
+                <div class="text-center">
+                    <label for="orderBy" class="control-label">Order by</label>
+                </div>
+                <div>
+                    <select class="form-control" required="required" ng-init="vm.request.OrderBy='name'" ng-model="vm.request.OrderBy" id="orderBy">
+                        <option value="date">Date</option>
+                        <option value="collaborators">Collaborators</option>
+                        <option value="name">Name</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <div class="checkbox">
+                    <label for="only-public">
+                        <input id="only-public" type="checkbox" ng-model="vm.request.OnlyPublic"> Show only public
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-show="vm.projects && vm.projects.length > 0">
+        <div listed-projects class="panel-body"></div>
+    </div>
+    <div ng-hide="vm.projects && vm.projects.length > 0">
+        <h2 class="text-center">No results!</h2>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+﻿<div class="container">
+    <h1 class="text-center">
+        {{vm.project.Name}}
+        <a href="#/projects/{{vm.id}}/addcommits" class="btn btn-sm btn-primary pull-right">Add commit</a>
+    </h1>
+    <div class="col-md-4 text-center">
+        Created on: <b>{{vm.project.CreatedOn  | beautifulDate}}</b>
+    </div>
+    <div class="col-md-4 text-center">
+        License: <b>{{vm.project.License}}</b>
+    </div>
+    <div class="col-md-4 text-center">
+        Total users: <b>{{vm.project.TotalUsers}}</b>
+    </div>
+</div>
