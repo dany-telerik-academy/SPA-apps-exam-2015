@@ -885,21 +885,14 @@
     <None Include="scripts\_references.js" />
     <Content Include="views\directives\listed-commits-directive.html" />
     <Content Include="views\directives\listed-projects-directive.html" />
-    <Content Include="views\directives\select-city-options-directive.html" />
     <Content Include="views\partials\commits\add-commit.html" />
     <Content Include="views\partials\commits\commit-details.html" />
-    <Content Include="views\partials\drivers\driver-details.html" />
-    <Content Include="views\partials\drivers\drivers.html" />
     <Content Include="views\partials\home\home.html" />
     <Content Include="views\partials\identity\login.html" />
     <Content Include="views\partials\identity\register.html" />
     <Content Include="views\partials\projects\create-project.html" />
     <Content Include="views\partials\projects\project-details.html" />
     <Content Include="views\partials\projects\projects.html" />
-    <Content Include="views\partials\trips\all-trips.html" />
-    <Content Include="views\partials\trips\create-trip.html" />
-    <Content Include="views\partials\trips\trip-details.html" />
-    <Content Include="views\partials\trips\trips-details.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
